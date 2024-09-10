@@ -1,54 +1,130 @@
-body {
-    font-family: Arial, sans-serif;
+/* General styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
     color: #333;
+    text-align: center;
+    padding: 20px;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 2em 1em;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-header p {
-    font-size: 1.2em;
+.logo img {
+    height: 50px;
+    margin-right: 10px;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    color: white;
-    background-color: #333;
-    text-decoration: none;
-    border-radius: 5px;
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-section {
-    padding: 2em;
-    text-align: center;
+/* Main section styles */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.feature {
-    margin: 1em 0;
+.intro-text {
+    flex: 1;
+    text-align: left;
 }
 
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer a {
+.intro-text h2 {
+    font-size: 2.5rem;
     color: #333;
-    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.intro-image {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Features section */
+.features {
+    margin: 50px 0;
+}
+
+.features h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.features-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.features-images img {
+    max-width: 45%;
+    border-radius: 8px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .features-images {
+        flex-direction: column;
+    }
+
+    .features-images img {
+        max-width: 80%;
+    }
 }
